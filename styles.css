@@ -1,0 +1,166 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f7;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+    width: 100%;
+}
+
+.container {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    width: 320px;
+    text-align: center;
+    border-top: 5px solid #1a73e8;
+}
+
+h1 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.result {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 20px;
+    min-height: 1.2em;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input, button {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #1a73e8;
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #1557b0;
+    transform: translateY(-1px);
+}
+
+.button-row {
+    display: flex;
+    gap: 8px;
+}
+
+.button-row button {
+    flex: 1;
+    font-size: 12px;
+}
+
+/* Estilo para el Título de la Oficina */
+.main-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.main-header h1 {
+    font-size: 2rem; /* Tamaño grande */
+    color: #2c3e50;  /* Color azul oscuro profesional */
+    text-transform: uppercase; /* Todo en mayúsculas */
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.main-header hr {
+    width: 60%;
+    border: 0;
+    border-top: 3px solid #1a73e8; /* Línea azul debajo del título */
+    margin: 0 auto;
+}
+
+/* Ajuste al body para que el título quede arriba de todo */
+body {
+    flex-direction: column; /* Cambiamos a columna para que el header esté arriba y el wrapper abajo */
+    padding-top: 40px;
+}
+/* Estilo para el número grande */
+.big-number {
+    font-size: 3rem;       /* Tamaño del número (3 veces el normal) */
+    font-weight: 800;      /* Muy negrita */
+    color: #1a73e8;        /* Azul institucional */
+    display: block;        /* Para que ocupe su propia línea */
+    margin: 10px 0;        /* Espacio arriba y abajo */
+}
+
+/* Para asegurar que el resultado esté debajo del botón */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.result {
+    order: 2;             /* Mueve el párrafo al final dentro del contenedor */
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.input-group {
+    order: 1;             /* Mantiene los inputs y el botón arriba */
+}
+
+/* Contenedor para el logo en la esquina superior */
+.brand-container {
+    position: absolute; /* Se ubica respecto a la página, no al texto */
+    top: 15px;          /* Espacio desde el borde superior */
+    left: 20px;         /* Espacio desde el borde izquierdo */
+    z-index: 1000;      /* Se asegura de estar por encima de todo */
+}
+
+.logo-superior {
+    height: 90px;       /* Tamaño del logo */
+    width: auto;
+    display: block;
+}
+
+/* Ajuste del header para que el título no suba demasiado */
+.main-header {
+    margin-top: 40px;   /* Le damos aire arriba para que no choque con el logo */
+    width: 100%;
+    text-align: center;
+}
+
+/* Para que en celulares el logo no tape el título */
+@media (max-width: 768px) {
+    .brand-container {
+        position: static; /* Vuelve a su lugar normal en la columna */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .main-header {
+        margin-top: 10px;
+    }
+
+}

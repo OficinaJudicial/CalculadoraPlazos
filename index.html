@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Jurídica de Plazos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <div class="brand-container">
+        <img src="logo2.png" alt="Logo Justicia" class="logo-superior">
+    </div>
+    <header class="main-header">
+        <h1>CALCULADORA JURIDICA DE PLAZOS</h1>
+        <h3>Oficina Judicial Central - Comodoro Rivadavia</h3>
+        <hr>
+    </header>
+
+    <div class="main-wrapper">
+
+    <div class="main-wrapper">
+        <div class="container">
+            <h1><span class="material-symbols-outlined">calendar_month</span> Días Corridos</h1>
+            <p id="resultCorridos" class="result">Seleccione fechas</p>
+            <div class="input-group">
+                <input type="date" id="dateStart1" />
+                <input type="date" id="dateEnd1" />
+                <button onclick="calculateDays()">Calcular Corridos</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1><span class="material-symbols-outlined">event_available</span> Días Hábiles</h1>
+            <p id="resultHabiles" class="result">Cargando feriados...</p>
+            <div class="input-group">
+                <input type="date" id="dateStart2" />
+                <input type="date" id="dateEnd2" />
+                <button onclick="calculateBusinessDays()">Calcular Hábiles</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1><span class="material-symbols-outlined">more_time</span> Sumar Plazos</h1>
+            <p id="resultPlazo" class="result">Ingrese fecha y días</p>
+            <div class="input-group">
+                <input type="date" id="dateStart3" />
+                <input type="number" id="daysToAdd" placeholder="Cantidad de días" step="1" />
+                <div class="button-row">
+                    <button onclick="addDays(false)">Corridos</button>
+                    <button onclick="addDays(true)">Hábiles</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
