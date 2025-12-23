@@ -19,7 +19,7 @@ body {
 
 .container {
     background: #ffffff;
-    padding: 10px;
+    padding: 30px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     width: 320px;
@@ -147,7 +147,7 @@ body {
 
 /* Ajuste del header para que el título no suba demasiado */
 .main-header {
-    margin-top: 40px;   /* Le damos aire arriba para que no choque con el logo */
+    margin-top: 10px;   /* Le damos aire arriba para que no choque con el logo */
     width: 100%;
     text-align: center;
 }

@@ -30,7 +30,8 @@ function calculateDays() {
     const d2 = new Date(end);
     const diff = Math.floor((d2 - d1) / (1000 * 60 * 60 * 24));
 
-    display.innerText = diff >= 0 ? `Resultado: ${diff} días` : "❌ Fecha inválida";
+    //display.innerText = diff >= 0 ? `Resultado: ${diff} días` : "❌ Fecha inválida";
+    display.innerHTML = `Resultado: <br> <span class="big-number">${diff}</span> <br> días corridos`;
 }
 
 // BLOQUE 2: CÁLCULO DÍAS HÁBILES
@@ -49,7 +50,7 @@ function calculateBusinessDays() {
         if (esDiaHabil(fechaActual)) contador++;
         fechaActual.setUTCDate(fechaActual.getUTCDate() + 1);
     }
-    display.innerText = `Resultado: ${contador} días hábiles`;
+    display.innerHTML = `Resultado: <br> <span class="big-number">${contador}</span> <br> días hábiles`;
 }
 
 // BLOQUE 3: SUMAR PLAZOS (Hábiles o Corridos)
@@ -85,8 +86,6 @@ function esDiaHabil(fecha) {
     const iso = fecha.toISOString().split('T')[0];
     return dia !== 0 && dia !== 6 && !listaFeriados.includes(iso);
 }
-
-
 
 
 
