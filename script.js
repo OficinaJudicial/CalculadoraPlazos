@@ -47,7 +47,7 @@ function calculateBusinessDays() {
 
     while (fechaActual <= fechaFin) {
         if (esDiaHabil(fechaActual)) contador++;
-        fechaActual.setUTCDate(fechaActual.getUTCDate() + 1);
+        fechaActual.setUTCDate(fechaActual.getUTCDate());
     }
     display.innerText = `Resultado: ${contador} días hábiles`;
 }
@@ -85,6 +85,7 @@ function esDiaHabil(fecha) {
     const iso = fecha.toISOString().split('T')[0];
     return dia !== 0 && dia !== 6 && !listaFeriados.includes(iso);
 }
+
 
 
 
